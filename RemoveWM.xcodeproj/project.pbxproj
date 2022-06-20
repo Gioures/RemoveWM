@@ -1,0 +1,457 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27B57C88DF473F27C4028993 /* Pods_FinishWaterMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2E7E0300FE90F25C98C86AB /* Pods_FinishWaterMark.framework */; };
+		BC55FAB2285F8E820073FD4A /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC55FAB1285F8E820073FD4A /* VideoModel.swift */; };
+		BC55FAB4285F952B0073FD4A /* String+Md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC55FAB3285F952A0073FD4A /* String+Md5.swift */; };
+		BC55FAB6285F9C060073FD4A /* Collections.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC55FAB5285F9C060073FD4A /* Collections.swift */; };
+		BC7BBF28285F7D9A00672CEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BBF27285F7D9A00672CEB /* AppDelegate.swift */; };
+		BC7BBF2C285F7D9A00672CEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BBF2B285F7D9A00672CEB /* ViewController.swift */; };
+		BC7BBF2F285F7D9A00672CEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7BBF2D285F7D9A00672CEB /* Main.storyboard */; };
+		BC7BBF31285F7D9E00672CEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7BBF30285F7D9E00672CEB /* Assets.xcassets */; };
+		BC7BBF34285F7D9E00672CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7BBF32285F7D9E00672CEB /* LaunchScreen.storyboard */; };
+		BC7BBF3C285F823E00672CEB /* Quanxian.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BBF3B285F823E00672CEB /* Quanxian.swift */; };
+		BC7BBF3E285F862A00672CEB /* DownloadMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BBF3D285F862A00672CEB /* DownloadMgr.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5CB4E6211EE4D406E6FB94DC /* Pods-FinishWaterMark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinishWaterMark.release.xcconfig"; path = "Target Support Files/Pods-FinishWaterMark/Pods-FinishWaterMark.release.xcconfig"; sourceTree = "<group>"; };
+		BC55FAB1285F8E820073FD4A /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		BC55FAB3285F952A0073FD4A /* String+Md5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Md5.swift"; sourceTree = "<group>"; };
+		BC55FAB5285F9C060073FD4A /* Collections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collections.swift; sourceTree = "<group>"; };
+		BC7BBF24285F7D9A00672CEB /* RemoveWM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoveWM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC7BBF27285F7D9A00672CEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC7BBF2B285F7D9A00672CEB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC7BBF2E285F7D9A00672CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC7BBF30285F7D9E00672CEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC7BBF33285F7D9E00672CEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC7BBF35285F7D9E00672CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC7BBF3B285F823E00672CEB /* Quanxian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quanxian.swift; sourceTree = "<group>"; };
+		BC7BBF3D285F862A00672CEB /* DownloadMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadMgr.swift; sourceTree = "<group>"; };
+		C2E7E0300FE90F25C98C86AB /* Pods_FinishWaterMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinishWaterMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8E190C96D24170D9F11E53 /* Pods-FinishWaterMark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinishWaterMark.debug.xcconfig"; path = "Target Support Files/Pods-FinishWaterMark/Pods-FinishWaterMark.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC7BBF21285F7D9A00672CEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27B57C88DF473F27C4028993 /* Pods_FinishWaterMark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC7BBF1B285F7D9A00672CEB = {
+			isa = PBXGroup;
+			children = (
+				BC7BBF26285F7D9A00672CEB /* RemoveWM */,
+				BC7BBF25285F7D9A00672CEB /* Products */,
+				EF47F3585C59607760FFCFE1 /* Pods */,
+				E58B4B8EA95E2F465100FEB4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BC7BBF25285F7D9A00672CEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC7BBF24285F7D9A00672CEB /* RemoveWM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC7BBF26285F7D9A00672CEB /* RemoveWM */ = {
+			isa = PBXGroup;
+			children = (
+				BC7BBF27285F7D9A00672CEB /* AppDelegate.swift */,
+				BC7BBF2B285F7D9A00672CEB /* ViewController.swift */,
+				BC7BBF2D285F7D9A00672CEB /* Main.storyboard */,
+				BC7BBF30285F7D9E00672CEB /* Assets.xcassets */,
+				BC7BBF32285F7D9E00672CEB /* LaunchScreen.storyboard */,
+				BC7BBF35285F7D9E00672CEB /* Info.plist */,
+				BC7BBF3B285F823E00672CEB /* Quanxian.swift */,
+				BC7BBF3D285F862A00672CEB /* DownloadMgr.swift */,
+				BC55FAB1285F8E820073FD4A /* VideoModel.swift */,
+				BC55FAB3285F952A0073FD4A /* String+Md5.swift */,
+				BC55FAB5285F9C060073FD4A /* Collections.swift */,
+			);
+			path = RemoveWM;
+			sourceTree = "<group>";
+		};
+		E58B4B8EA95E2F465100FEB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2E7E0300FE90F25C98C86AB /* Pods_FinishWaterMark.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF47F3585C59607760FFCFE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA8E190C96D24170D9F11E53 /* Pods-FinishWaterMark.debug.xcconfig */,
+				5CB4E6211EE4D406E6FB94DC /* Pods-FinishWaterMark.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC7BBF23285F7D9A00672CEB /* RemoveWM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC7BBF38285F7D9E00672CEB /* Build configuration list for PBXNativeTarget "RemoveWM" */;
+			buildPhases = (
+				7A432EEC1DD8688E09533579 /* [CP] Check Pods Manifest.lock */,
+				BC7BBF20285F7D9A00672CEB /* Sources */,
+				BC7BBF21285F7D9A00672CEB /* Frameworks */,
+				BC7BBF22285F7D9A00672CEB /* Resources */,
+				95BEE33A8D2619B12BDE8708 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoveWM;
+			productName = FinishWaterMark;
+			productReference = BC7BBF24285F7D9A00672CEB /* RemoveWM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC7BBF1C285F7D9A00672CEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					BC7BBF23285F7D9A00672CEB = {
+						CreatedOnToolsVersion = 13.3;
+					};
+				};
+			};
+			buildConfigurationList = BC7BBF1F285F7D9A00672CEB /* Build configuration list for PBXProject "RemoveWM" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC7BBF1B285F7D9A00672CEB;
+			productRefGroup = BC7BBF25285F7D9A00672CEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC7BBF23285F7D9A00672CEB /* RemoveWM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC7BBF22285F7D9A00672CEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC7BBF34285F7D9E00672CEB /* LaunchScreen.storyboard in Resources */,
+				BC7BBF31285F7D9E00672CEB /* Assets.xcassets in Resources */,
+				BC7BBF2F285F7D9A00672CEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A432EEC1DD8688E09533579 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinishWaterMark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95BEE33A8D2619B12BDE8708 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinishWaterMark/Pods-FinishWaterMark-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinishWaterMark/Pods-FinishWaterMark-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinishWaterMark/Pods-FinishWaterMark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC7BBF20285F7D9A00672CEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC7BBF2C285F7D9A00672CEB /* ViewController.swift in Sources */,
+				BC55FAB4285F952B0073FD4A /* String+Md5.swift in Sources */,
+				BC7BBF3C285F823E00672CEB /* Quanxian.swift in Sources */,
+				BC7BBF3E285F862A00672CEB /* DownloadMgr.swift in Sources */,
+				BC55FAB2285F8E820073FD4A /* VideoModel.swift in Sources */,
+				BC55FAB6285F9C060073FD4A /* Collections.swift in Sources */,
+				BC7BBF28285F7D9A00672CEB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BC7BBF2D285F7D9A00672CEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC7BBF2E285F7D9A00672CEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC7BBF32285F7D9E00672CEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC7BBF33285F7D9E00672CEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC7BBF36285F7D9E00672CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC7BBF37285F7D9E00672CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC7BBF39285F7D9E00672CEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8E190C96D24170D9F11E53 /* Pods-FinishWaterMark.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5X39TW69X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinishWaterMark/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "去水印";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App需要访问您的相册以保存的视频";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App需要访问您的相册以保存视频";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.myObjct.qy.FinishWaterMark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC7BBF3A285F7D9E00672CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CB4E6211EE4D406E6FB94DC /* Pods-FinishWaterMark.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5X39TW69X8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FinishWaterMark/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "去水印";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App需要访问您的相册以保存的视频";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App需要访问您的相册以保存视频";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.myObjct.qy.FinishWaterMark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC7BBF1F285F7D9A00672CEB /* Build configuration list for PBXProject "RemoveWM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC7BBF36285F7D9E00672CEB /* Debug */,
+				BC7BBF37285F7D9E00672CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC7BBF38285F7D9E00672CEB /* Build configuration list for PBXNativeTarget "RemoveWM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC7BBF39285F7D9E00672CEB /* Debug */,
+				BC7BBF3A285F7D9E00672CEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC7BBF1C285F7D9A00672CEB /* Project object */;
+}

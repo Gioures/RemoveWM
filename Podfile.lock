@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (4.9.1)
+  - HandyJSON (5.0.2)
+  - IQKeyboardManagerSwift (6.5.10)
+  - MBProgressHUD (1.2.0)
+  - Toast-Swift (5.0.1)
+  - ZFPlayer (4.0.3):
+    - ZFPlayer/Core (= 4.0.3)
+  - ZFPlayer/Core (4.0.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - HandyJSON
+  - IQKeyboardManagerSwift
+  - MBProgressHUD
+  - Toast-Swift (~> 5.0.1)
+  - ZFPlayer
+
+SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - Alamofire
+    - HandyJSON
+    - IQKeyboardManagerSwift
+    - MBProgressHUD
+    - Toast-Swift
+    - ZFPlayer
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  ZFPlayer: 624c92de06eb34df322c3b53b4c9ce760f528f7a
+
+PODFILE CHECKSUM: 4ac65a146c71e7f4f9568771974373a131a8a43a
+
+COCOAPODS: 1.11.3
