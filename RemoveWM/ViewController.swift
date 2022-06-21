@@ -13,7 +13,7 @@ import AVFoundation
 import AVKit
 class ViewController: UIViewController {
 
-    @IBOutlet weak var play: UIButton!
+    @IBOutlet weak var clear: UIButton!
     @IBOutlet weak var displayView: UIView!
     @IBOutlet weak var save: UIButton!
     @IBOutlet weak var parsing: UIButton!
@@ -37,7 +37,16 @@ class ViewController: UIViewController {
         Quanxian.requestAccessPhotos {
             print("获取权限成功");
         }
-        self.play.isHidden = true;
+        
+        
+        let str = NSAttributedString(string: "粘贴视频链接地址到此处", attributes: [.foregroundColor: UIColor.gray])
+        textfield.attributedPlaceholder = str
+        clear.setTitle(Cach.getFileSizeByPath(path: hostPath), for: .normal)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        player.view.frame = displayView.bounds;
     }
 
     // MARK: - 当前解析的视频的存储地址
@@ -61,18 +70,19 @@ class ViewController: UIViewController {
         
         let path = nowPath()!
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
+        hud.mode = .annularDeterminate
         hud.show(animated: true)
         // 下载并写入 相册
         let _ = BTFileDownloadApi(fileUrl: url, saveFilePath: path) { bytesRead, totalBytesRead, progrss in
             hud.progress = Float(progrss)
         } success: { reponse in
             hud.hide(animated: true)
-            self.makeTheVideoPriver(path: path)
+            self.clear.setTitle(Cach.getFileSizeByPath(path: self.hostPath), for: .normal)
             Collections.writeToXiangce(path: path) {[weak self] success, error in
                 DispatchQueue.main.async {
                     if success {
                         self?.view.makeToast("保存到相册成功")
-                        self?.play.isHidden = false;
+                        self?.textfield.text = ""
                     }else {
                         self?.view.makeToast("保存到相册失败")
                     }
@@ -94,12 +104,15 @@ class ViewController: UIViewController {
         }
         let hud = MBProgressHUD.showAdded(to: self.view, animated: true)
         hud.show(animated: true)
-        DownloadMgr.jiexi(urlSrt: text) {[weak self] success ,datadic  in
+        DownloadMgr.jiexi(urlSrt: self.getTheHttpText()) {[weak self] success ,datadic  in
             hud.hide(animated: true)
             if success {
                 self?.model = JSONDeserializer<VideoModel>.deserializeFrom(dict: datadic)
                 if self?.model != nil {
                     self?.view.makeToast("解析成功");
+                    if let url = self?.model?.url {
+                        self?.makeTheVideoPriver(path: url, bendi: false)
+                    }
                 }
             }else {
                 self?.view.makeToast("解析失败");
@@ -108,17 +121,79 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func playVideo(_ sender: UIButton) {
-        guard let player = player.player else { return }
-        player.play()
+    
+    @IBAction func clearCach(_ sender: UIButton) {
+        let alert = UIAlertController(title: "提示", message: "确定删除缓存？", preferredStyle: .alert)
+        let actionCertain = UIAlertAction(title: "确定", style: .default) { action in
+            if Cach.clearSomeCacher(withPath: self.hostPath) {
+                sender.setTitle("0.00MB", for: .normal)
+            }
+        }
+        let actionCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        alert.addAction(actionCancel)
+        alert.addAction(actionCertain)
+        present(alert, animated: true, completion: nil)
     }
     
-    fileprivate func makeTheVideoPriver(path: String) {
-        let url = URL(fileURLWithPath: path)
-        let item = AVPlayerItem(url: url)
+    func getCacheFileSize() -> String{
+        var foldSize: UInt64 = 0
+        let filePath: String = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first ?? ""
+        if let files = FileManager.default.subpaths(atPath: filePath) {
+            for path in files {
+                let temPath: String = filePath+"/"+path
+                let folder = try? FileManager.default.attributesOfItem(atPath: temPath) as NSDictionary
+                if let c = folder?.fileSize() {
+                    foldSize += c
+                }
+            }
+        }
+        //保留2位小数
+        if foldSize > 1024*1024 {
+            
+            return String(format: "%.2f", Double(foldSize)/1024.0/1024.0) + "MB"
+        }
+        else if foldSize > 1024 {
+            return String(format: "%.2f", Double(foldSize)/1024.0) + "KB"
+        }else {
+            return String(foldSize) + "B"
+        }
+    }
+
+    
+    
+    fileprivate func makeTheVideoPriver(path: String, bendi: Bool = false) {
+        var url: URL?
+        if bendi {
+            url = URL(fileURLWithPath: path)
+        }else {
+            url = URL(string: path)
+        }
+        
+        guard let urlzz = url else {
+            return
+        }
+        
+        let item = AVPlayerItem(url: urlzz)
         player.player = AVPlayer(playerItem: item)
     }
     
+    // MARK: - 获取简化后的链接
+    private func getTheHttpText() -> String{
+        guard let text = textfield.text else { return ""}
+        if text.contains("复制此链接") {
+            // 抖音
+            let c = text.components(separatedBy: "http")
+            if c.count == 2 {
+                let str = c[1];
+                let content = str.components(separatedBy: " 复制此链接")
+                if content.count > 0 {
+                    let httpsUrl = content[0]
+                    return "http"+httpsUrl
+                }
+            }
+        }
+        return text
+    }
 
 }
 

@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FinishWaterMark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RemoveWM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,44 +25,37 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oQ-7e-W50">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cdn-0J-ZF8">
+                                                <rect key="frame" x="0.0" y="688" width="414" height="70"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMG-ov-ZZa">
-                                                        <rect key="frame" x="182" y="319" width="50" height="50"/>
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-Vq-z9a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="4WO-pg-bKb"/>
-                                                            <constraint firstAttribute="width" constant="50" id="wzq-zl-IIf"/>
+                                                            <constraint firstAttribute="height" constant="70" id="ZcT-uZ-8kE"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" title="play">
-                                                            <color key="titleColor" systemColor="systemRedColor"/>
+                                                        <state key="normal" title="保存">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="playVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dre-nH-9ad"/>
+                                                            <action selector="saveVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9W-ko-5S9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSg-CO-Fx9">
+                                                        <rect key="frame" x="207" y="0.0" width="207" height="70"/>
+                                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="清理缓存"/>
+                                                        <connections>
+                                                            <action selector="clearCach:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j3b-Rt-9fi"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="CMG-ov-ZZa" firstAttribute="centerY" secondItem="9oQ-7e-W50" secondAttribute="centerY" id="WWZ-8A-4cz"/>
-                                                    <constraint firstItem="CMG-ov-ZZa" firstAttribute="centerX" secondItem="9oQ-7e-W50" secondAttribute="centerX" id="b3H-8u-IKv"/>
-                                                </constraints>
-                                            </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtS-Vq-z9a">
-                                                <rect key="frame" x="0.0" y="688" width="414" height="70"/>
-                                                <color key="backgroundColor" systemColor="systemRedColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="70" id="ZcT-uZ-8kE"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="保存">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="saveVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P9W-ko-5S9"/>
-                                                </connections>
-                                            </button>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -128,9 +121,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clear" destination="iSg-CO-Fx9" id="IEn-n7-zrM"/>
                         <outlet property="displayView" destination="9oQ-7e-W50" id="MKJ-4O-Ewv"/>
                         <outlet property="parsing" destination="IHz-Tl-dmn" id="bCw-PU-rdL"/>
-                        <outlet property="play" destination="CMG-ov-ZZa" id="PMA-04-G2A"/>
                         <outlet property="save" destination="QtS-Vq-z9a" id="ZiF-T1-hqX"/>
                         <outlet property="textfield" destination="qF0-YF-iJW" id="Zs0-ky-bQ2"/>
                     </connections>
@@ -141,6 +134,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

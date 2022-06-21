@@ -18,6 +18,7 @@
 		BC7BBF34285F7D9E00672CEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC7BBF32285F7D9E00672CEB /* LaunchScreen.storyboard */; };
 		BC7BBF3C285F823E00672CEB /* Quanxian.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BBF3B285F823E00672CEB /* Quanxian.swift */; };
 		BC7BBF3E285F862A00672CEB /* DownloadMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7BBF3D285F862A00672CEB /* DownloadMgr.swift */; };
+		BCFE8F8C2861F2D20063DE4F /* Cach.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFE8F8B2861F2D20063DE4F /* Cach.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		BC7BBF35285F7D9E00672CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BC7BBF3B285F823E00672CEB /* Quanxian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quanxian.swift; sourceTree = "<group>"; };
 		BC7BBF3D285F862A00672CEB /* DownloadMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadMgr.swift; sourceTree = "<group>"; };
+		BCFE8F872861F2BF0063DE4F /* RemoveWM-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemoveWM-Bridging-Header.h"; sourceTree = "<group>"; };
+		BCFE8F8B2861F2D20063DE4F /* Cach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cach.swift; sourceTree = "<group>"; };
 		C2E7E0300FE90F25C98C86AB /* Pods_FinishWaterMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinishWaterMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8E190C96D24170D9F11E53 /* Pods-FinishWaterMark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinishWaterMark.debug.xcconfig"; path = "Target Support Files/Pods-FinishWaterMark/Pods-FinishWaterMark.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +85,8 @@
 				BC55FAB1285F8E820073FD4A /* VideoModel.swift */,
 				BC55FAB3285F952A0073FD4A /* String+Md5.swift */,
 				BC55FAB5285F9C060073FD4A /* Collections.swift */,
+				BCFE8F872861F2BF0063DE4F /* RemoveWM-Bridging-Header.h */,
+				BCFE8F8B2861F2D20063DE4F /* Cach.swift */,
 			);
 			path = RemoveWM;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 				TargetAttributes = {
 					BC7BBF23285F7D9A00672CEB = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 					};
 				};
 			};
@@ -222,6 +228,7 @@
 				BC55FAB4285F952B0073FD4A /* String+Md5.swift in Sources */,
 				BC7BBF3C285F823E00672CEB /* Quanxian.swift in Sources */,
 				BC7BBF3E285F862A00672CEB /* DownloadMgr.swift in Sources */,
+				BCFE8F8C2861F2D20063DE4F /* Cach.swift in Sources */,
 				BC55FAB2285F8E820073FD4A /* VideoModel.swift in Sources */,
 				BC55FAB6285F9C060073FD4A /* Collections.swift in Sources */,
 				BC7BBF28285F7D9A00672CEB /* AppDelegate.swift in Sources */,
@@ -370,11 +377,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5X39TW69X8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FinishWaterMark/Info.plist;
+				INFOPLIST_FILE = RemoveWM/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "去水印";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App需要访问您的相册以保存的视频";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App需要访问您的相册以保存视频";
@@ -392,6 +400,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.myObjct.qy.FinishWaterMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RemoveWM/RemoveWM-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -403,11 +413,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5X39TW69X8;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = FinishWaterMark/Info.plist;
+				INFOPLIST_FILE = RemoveWM/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "去水印";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App需要访问您的相册以保存的视频";
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App需要访问您的相册以保存视频";
@@ -425,6 +436,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cn.myObjct.qy.FinishWaterMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RemoveWM/RemoveWM-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

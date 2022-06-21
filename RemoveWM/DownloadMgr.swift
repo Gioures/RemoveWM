@@ -11,13 +11,25 @@ class DownloadMgr: NSObject {
     static let HOST = "http://tool.youfanzi.cn/T/duanjx/api.php?url="
     
     static func jiexi(urlSrt: String, completed:(@escaping (_ success: Bool, _ dic: [String:Any])->())){
-        guard let url = URL(string: HOST + urlSrt) else { return }
-        Alamofire.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseJSON { response in
-            guard let dic = response.result.value as? [String: Any], let data = dic["data"] as? [String: Any] else {
-                completed(false, ["def":"def"])
-                return
+        guard let url = URL(string: HOST + urlSrt) else {
+            completed(false, ["def":"def"])
+            return
+        }
+        Alamofire.request(url, method: .post,
+                          parameters: nil,
+                          encoding: JSONEncoding.default,
+                          headers: nil).responseJSON { response in
+            if response.result.isSuccess {
+                print("\nresponse = \(response)\n")
+                guard let dic = response.result.value as? [String: Any], let data = dic["data"] as? [String: Any] else {
+                    completed(false, ["def":"def"])
+                    return
+                }
+                completed(true, data)
+            } else if response.result.isFailure {
+                completed(false, ["def": "失败"]);
             }
-            completed(true, data)
+            
         }
     }
     
@@ -42,7 +54,7 @@ class DownloadMgr: NSObject {
     var fail:BT_FileDownloadFail?
     
     private var queue:DispatchQueue = DispatchQueue.main
-  
+    
     // 默认主线程
     @objc convenience init(fileUrl:String,saveFilePath:String,queue:DispatchQueue? = DispatchQueue.main,progress:BT_FileDownloadProgress?,success:BT_FileDownloadSuccess?, fail:BT_FileDownloadFail?) {
         
